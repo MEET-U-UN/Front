@@ -25,7 +25,7 @@
     </div>
     Mi perfil
     </router-link>
-    <router-link
+    <!-- <router-link
       tag="div"
       class="menu__item"
       active-class="menu__item--active"
@@ -35,12 +35,12 @@
       <i class="far fa-calendar-alt"></i>
     </div>
     Programación
-    </router-link>
+    </router-link> -->
     <router-link
       tag="div"
       class="menu__item"
       active-class="menu__item--active"
-      :to="{ name: 'home' }"
+      :to="{ name: 'friends' }"
     >
     <div class="menu__item__icon">
       <i class="fa fa-user-friends"></i>
@@ -54,7 +54,7 @@
       tag="div"
       class="menu__item"
       active-class="menu__item--active"
-      :to="{ name: 'home' }"
+      :to="{ name: 'configuration' }"
     >
     <div class="menu__item__icon">
       <i class="fa fa-tools"></i>
@@ -64,7 +64,7 @@
     <router-link
       tag="div"
       class="menu__item"
-      :to="{ name: 'home' }"
+      :to="{ name: 'help' }"
     >
     <div class="menu__item__icon">
       <i class="fa fa-question"></i>

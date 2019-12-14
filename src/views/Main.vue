@@ -258,17 +258,6 @@ export default class Main extends modalMixin {
 
 <style lang='scss' scoped>
 
-.search-bar {
-  display: block;
-  border-radius: 20px;
-  height: 50px;
-  margin: 20px auto;
-  width: 80%;
-  background: white;
-  padding: 10px 20px;
-  color: $colorBlackLight;
-}
-
 .titles,
 .col-container {
   display: flex;

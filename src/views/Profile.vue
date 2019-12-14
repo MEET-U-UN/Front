@@ -1,6 +1,8 @@
 <template>
   <div class="profile">
-    <img src="../assets/people/persona1.png" alt="" class="photo-profile">
+    <div class="photo-profile">
+      <img src="../assets/people/persona1.png" alt="" class="hlp__image-cover">
+    </div>
 
     <div class="card card__content__title">
       <div class="fl-row-a">
@@ -86,6 +88,9 @@ export default class Profile extends modalMixin {
 
 .photo-profile {
   @include circular(300px);
+  position: relative;
+  background: white;
+  padding: 5px;
 }
 
 .btn__container--horizontal {
