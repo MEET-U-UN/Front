@@ -9,7 +9,7 @@
         :key="person.name" 
         class="friend">
         <div class="friend__photo">
-          <img src="../assets/people/persona1.png" alt="" class="hlp__image-cover">
+          <img src="../assets/profile1.png" alt="" class="hlp__image-cover">
         </div>
         <div class="friend__data">
           {{ person.name }}

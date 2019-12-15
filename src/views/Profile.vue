@@ -1,7 +1,7 @@
 <template>
   <div class="profile">
     <div class="photo-profile">
-      <img src="../assets/people/persona1.png" alt="" class="hlp__image-cover">
+      <img src="../assets/profile1.png" alt="" class="hlp__image-cover">
     </div>
 
     <div class="card card__content__title">

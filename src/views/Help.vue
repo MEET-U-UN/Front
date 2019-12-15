@@ -14,7 +14,7 @@
       <div
         :class="{'info--active': helpShow[0]}" 
         class="info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad at aliquid distinctio officia laudantium maxime fugit velit, rerum quasi vel cum repellat necessitatibus possimus saepe est quod maiores sit! Provident, mollitia dolore! Ex iste dolores velit blanditiis veritatis, praesentium deserunt expedita sequi. Quas cum dolores doloribus explicabo possimus id beatae tempora? Perferendis aliquid et quibusdam saepe non obcaecati quisquam ratione veniam minima. Voluptatum mollitia corrupti repellat numquam enim eius ratione? Ullam quidem quos illo nemo quas cupiditate eius reiciendis voluptates error assumenda nulla, esse culpa nostrum suscipit magnam voluptatem laboriosam eligendi laudantium provident voluptas impedit ab fugit nihil? Ab, ad.
+En la pestaña mis planes, en la esquina inferior derecha dale al boton con un "+" en él. La aplicación te guiará para que completes los datos necesarios para crear un plan. Al final del proceso dale click a "Crear Plan" y ya podras verlo en tu pantalla principal.
       </div>
     </div>
 
@@ -25,12 +25,12 @@
         <i
           :class="{'i--white': helpShow[1]}" 
           class="fa fa-caret-right"></i>
-        ¿Cómo cambiar mis preferencias personales?
+        ¿Cómo cambiar mis datos personales?
       </div>
       <div
         :class="{'info--active': helpShow[1]}" 
         class="info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad at aliquid distinctio officia laudantium maxime fugit velit, rerum quasi vel cum repellat necessitatibus possimus saepe est quod maiores sit! Provident, mollitia dolore! Ex iste dolores velit blanditiis veritatis, praesentium deserunt expedita sequi. Quas cum dolores doloribus explicabo possimus id beatae tempora? Perferendis aliquid et quibusdam saepe non obcaecati quisquam ratione veniam minima. Voluptatum mollitia corrupti repellat numquam enim eius ratione? Ullam quidem quos illo nemo quas cupiditate eius reiciendis voluptates error assumenda nulla, esse culpa nostrum suscipit magnam voluptatem laboriosam eligendi laudantium provident voluptas impedit ab fugit nihil? Ab, ad.
+        Ve a la pestaña Perfil y cambia los datos a tu gusto. Una vez hallas finalizado, da click en Modificar Datos.
       </div>
     </div>
 
@@ -46,7 +46,7 @@
       <div
         :class="{'info--active': helpShow[2]}" 
         class="info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad at aliquid distinctio officia laudantium maxime fugit velit, rerum quasi vel cum repellat necessitatibus possimus saepe est quod maiores sit! Provident, mollitia dolore! Ex iste dolores velit blanditiis veritatis, praesentium deserunt expedita sequi. Quas cum dolores doloribus explicabo possimus id beatae tempora? Perferendis aliquid et quibusdam saepe non obcaecati quisquam ratione veniam minima. Voluptatum mollitia corrupti repellat numquam enim eius ratione? Ullam quidem quos illo nemo quas cupiditate eius reiciendis voluptates error assumenda nulla, esse culpa nostrum suscipit magnam voluptatem laboriosam eligendi laudantium provident voluptas impedit ab fugit nihil? Ab, ad.
+En la pestaña Amigos selecciona dentro de la lista que aparece a la persona que deseas eliminar. Dale al botón de "Eliminar" y luego confirma tu decision.
       </div>
     </div>
 
@@ -62,7 +62,7 @@
       <div
         :class="{'info--active': helpShow[3]}" 
         class="info">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad at aliquid distinctio officia laudantium maxime fugit velit, rerum quasi vel cum repellat necessitatibus possimus saepe est quod maiores sit! Provident, mollitia dolore! Ex iste dolores velit blanditiis veritatis, praesentium deserunt expedita sequi. Quas cum dolores doloribus explicabo possimus id beatae tempora? Perferendis aliquid et quibusdam saepe non obcaecati quisquam ratione veniam minima. Voluptatum mollitia corrupti repellat numquam enim eius ratione? Ullam quidem quos illo nemo quas cupiditate eius reiciendis voluptates error assumenda nulla, esse culpa nostrum suscipit magnam voluptatem laboriosam eligendi laudantium provident voluptas impedit ab fugit nihil? Ab, ad.
+        Por ahora esto no se puede hacer. Pero a que el verde te gusta mucho no?
       </div>
     </div>
 
