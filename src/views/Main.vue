@@ -173,6 +173,14 @@
           <div class="col-container">
             <dir>
               <div class="card__label">Ubicaciones</div>
+              <div
+                @click="showMap = true" 
+                class="btn btn--blue">Agregar</div>
+              <div
+                v-for="(coordinate, index) in coordinatesList" 
+                @click="removeItem(coordinates, 'coordinates')"
+                :key="index"
+                class="card__data">{{ coordinate.lat | num }} | {{ coordinate.lng | num }}</div>
             </dir>
             <dir>
               <div class="card__label">Opciones plan</div>
@@ -215,6 +223,11 @@
         </div>
       </div>
     </Modal>
+
+    <Map
+      v-show="showMap"
+      @close="showMap = false"
+      @position="getPosition"></Map>
   </div>
 </template>
 
@@ -227,12 +240,20 @@ import {
 import Modal from '../components/ui/Modal.vue';
 import modalMixin from '../mixins/modalMixin';
 import Comments from '../components/shared/Comments.vue';
+import Map from '../components/shared/Map.vue';
 
 @Component({
   components: {
     Modal,
     Comments,
+    Map,
   },
+  filters: {
+    num(value: number) {
+      const a = String(value);
+      return a.substring(0, 3);
+    }
+  }
 })
 export default class Main extends modalMixin {
   planList: string[] = [];
@@ -244,6 +265,11 @@ export default class Main extends modalMixin {
   budgetList: string[] = [];
   budget: string = "";
 
+  coordinates = '';
+  coordinatesList: Array<{ lat: number, lng: number }> = [];
+
+  showMap = false;
+
   get totalBudget() {
     return +this.budgetList.reduce((acc: string, curr: string) => {
       return (+acc + +curr) + '';
@@ -252,6 +278,17 @@ export default class Main extends modalMixin {
 
   editPlan() {
     this.showModal();
+  }
+
+  getPosition(position: google.maps.LatLng) {
+    const a = position.lat();
+    const b = position.lng();
+
+    this.coordinatesList.push({
+      lat: a,
+      lng: b,
+    });
+    this.showMap = false;
   }
 }
 </script>

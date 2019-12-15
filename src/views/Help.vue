@@ -86,7 +86,7 @@ export default class Help extends Vue {
   ]
 
   toggleHelp(idx: number) {
-    this.$set(this.helpShow, idx, !this.helpShow[idx]);
+    this.$set(this.helpShow, idx, !this.helpShow[idx]);a
   }
 }
 </script>
