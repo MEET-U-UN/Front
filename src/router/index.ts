@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue';
 import Layout from '../components/shared/Layout.vue';
 import Main from '../views/Main.vue';
+import Profile from '../views/Profile.vue';
 
 Vue.use(VueRouter)
 
@@ -12,6 +13,11 @@ const layoutRoutes = [
     path: '',
     name: 'main',
     component: Main,
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: Profile,
   },
 ];
 

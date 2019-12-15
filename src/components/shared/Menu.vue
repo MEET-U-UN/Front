@@ -7,7 +7,7 @@
       tag="div"
       class="menu__item"
       active-class="menu__item--active"
-      :to="{ name: 'home' }"
+      :to="{ name: 'main' }"
     >
     <div class="menu__item__icon">
       <i class="fa fa-columns"></i>
@@ -18,7 +18,7 @@
       tag="div"
       class="menu__item"
       active-class="menu__item--active"
-      :to="{ name: 'home' }"
+      :to="{ name: 'profile' }"
     >
     <div class="menu__item__icon">
       <i class="fa fa-user"></i>
@@ -29,7 +29,7 @@
       tag="div"
       class="menu__item"
       active-class="menu__item--active"
-      :to="{ name: 'home' }"
+      :to="{ name: 'profile' }"
     >
     <div class="menu__item__icon">
       <i class="far fa-calendar-alt"></i>
@@ -108,7 +108,7 @@ export default class Menu extends Vue {
   transition: .3s;
 
   &:hover {
-    background: darken($color: $colorGreenLime, $amount: 6%);
+    background: darken($color: $colorGreenLime, $amount: 15%);
   }
 }
 

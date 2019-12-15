@@ -296,6 +296,8 @@ export default class Main extends modalMixin {
 
 .comments {
   width: 300px;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 </style>

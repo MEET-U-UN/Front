@@ -9,6 +9,7 @@ import { Modal } from '../types/general';
 export default class modalMixin extends Vue {
   refModal!: Modal;
 
+
   mounted() {
     this.refModal = this.$refs.modal as Modal;
   }
@@ -21,8 +22,8 @@ export default class modalMixin extends Vue {
     this.refModal.hideModal();
   }
 
-  addItem(item: any, model: string) {
-    if ((this as any)[`${model}List`].includes(item)) return;
+  addItem(item: any, model: string, repeat = false) {
+    if ((this as any)[`${model}List`].includes(item) && !repeat) return;
 
     (this as any)[`${model}List`].push(item);
     (this as any)[model] = '';

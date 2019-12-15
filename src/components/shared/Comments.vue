@@ -1,33 +1,70 @@
 <template>
   <div class="chat__wrapper">
     <div class="card__title">Comentarios</div>
-    <div class="chat">
+    <div
+      ref="chat" 
+      class="chat">
       <div class="chat__item">
         <div class="chat__icon">
           <img src="../../assets/people/persona1.png" alt="" class="hlp__image-cover">
         </div>
         <div class="chat__bubble">adddddddddddddddddddddddddddddsdasd</div>
       </div>
+      <div class="chat__item">
+        <div class="chat__icon">
+          <img src="../../assets/people/persona1.png" alt="" class="hlp__image-cover">
+        </div>
+        <div class="chat__bubble">adddddddddddddddddddddddddddddsdasd</div>
+      </div>
+
+      <!-- User -->
+      <div
+        v-for="(message, idx) in messageList"
+        :key="idx" 
+        class="chat__item chat__item--right">
+        <div class="chat__bubble chat__bubble--right">{{ message }}</div>
+      </div>
     </div>
-    <input type="text" class="message" />
+    <input
+      v-model="message"
+      @keypress.enter="sendMessage(message, 'message', true)" 
+      type="text" class="message" />
   </div>
 </template>
 
 <script lang='ts'>
 import { Component, Prop, Vue } from "vue-property-decorator";
+import modalMixin from '../../mixins/modalMixin';
 
 @Component({})
-export default class Comments extends Vue {}
+export default class Comments extends modalMixin {
+  messageList: string[] = [];
+  message: string = '';
+
+  sendMessage(message: string, model: string, repeat = false) {
+    if (message === '') return;
+    
+    const chat = this.$refs.chat as HTMLElement;
+    this.addItem(message, model, true);
+    this.$nextTick(() => {
+      chat.scrollTop = chat.scrollHeight - chat.clientHeight;
+    });
+  }
+}
 </script>
 
 <style lang='scss' scoped>
 
 .chat__wrapper {
+  display: flex;
+  flex-flow: column nowrap;
   height: 100%;
+  flex: 1 0;
 }
 
 .chat {
-  max-height: 50vh;
+  flex: 1 0;
+  max-height: 40vh;
   overflow-y: auto;
 }
 
@@ -35,8 +72,8 @@ export default class Comments extends Vue {}
   display: block;
   border-radius: 20px;
   width: 80%;
-  margin: auto auto;
   height: 30px;
+  margin: 0 auto;
   background: rgba(white, 0.8);
   padding: 10px 30px;
   position: relative;
@@ -45,7 +82,11 @@ export default class Comments extends Vue {}
 .chat__item {
   display: flex;
   align-items: center;
-  margin: 0 8px;
+  margin: 0 5px;
+}
+
+.chat__item--right {
+  justify-content: flex-end;
 }
 
 .chat__icon {
@@ -59,14 +100,14 @@ export default class Comments extends Vue {}
   padding: 0px;
   background: $colorGreenDeep;
   border-radius: 20px;
-  margin: 20px;
+  margin: 15px;
   font-size: 19px;
   padding: 5px 10px;
   max-width: 200px;
   white-space: pre-wrap;
   word-wrap: break-word;
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     border-style: solid;
@@ -78,6 +119,13 @@ export default class Comments extends Vue {}
     right: calc(100% - 2px);
     top: 50%;
     transform: translateY(-50%);
+  }
+}
+
+.chat__bubble--right {
+  &::after {
+    left: calc(100% - 2px);
+    border-width: 7px 0 7px 7px;
   }
 }
 
