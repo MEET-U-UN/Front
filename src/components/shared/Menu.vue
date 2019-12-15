@@ -1,7 +1,7 @@
 <template>
   <div class="menu-bar">
     <div class="user-profile">
-      <img src="../../assets/people/persona1.png" alt="" class="hlp__image-cover">
+      <img src="../../assets/profile1.png" alt="" class="hlp__image-cover">
     </div>
     <router-link
       tag="div"
