@@ -1,0 +1,19 @@
+.card {
+  border-radius: $borderRadius;
+  background: $colorGreenLime;
+}
+
+.card--centered {
+  @extend %absoluteCentered;
+}
+
+.card__title {
+  color: white;
+  font-size: 23px;
+}
+
+.card__line {
+  margin: 5px 0;
+  height: 2px;
+  background: rgba($colorBlackSoft, .3);
+}

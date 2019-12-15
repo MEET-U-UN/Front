@@ -1,0 +1,83 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "buttons.scss";
+@import "titles.scss";
+@import "cards.scss";
+@import "forms.scss";
+
+
+// Helpers
+.hlp__image-cover {
+  @include squared(100%);
+  object-fit: cover;
+}
+
+.hlp__image-contain {
+  @include squared(100%);
+  object-fit: contain;
+}
+
+.divider {
+  width: 80%;
+  height: 2px;
+  background: rgba(black, 0.15);
+  margin: 10px auto;
+  border-radius: 30px;
+}
+
+.general-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.fl-row {
+  display: flex;
+}
+
+.fl-col {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.fl-row-w {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.fl-row-a {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.fl-data {
+  margin: 10px 0;
+}
+
+.user-pick {
+  @include circular(70px);
+  margin: 0 10px;
+
+  img {
+    @include squared(100%);
+    object-fit: contain;
+  }
+}
+
+.modal-container {
+  width: 600px;
+}
+
+.modal-container--xl {
+  width: 80vw;
+  max-width: 1200px;
+}
+
+.col-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.col {
+  width: 40%;
+}
