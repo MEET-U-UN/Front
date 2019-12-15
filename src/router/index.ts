@@ -5,6 +5,7 @@ import Home from '../views/Home.vue';
 import Layout from '../components/shared/Layout.vue';
 import Main from '../views/Main.vue';
 import Profile from '../views/Profile.vue';
+import Friends from '../views/Friends.vue';
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,11 @@ const layoutRoutes = [
     path: '/profile',
     name: 'profile',
     component: Profile,
+  },
+  {
+    path: '/friends',
+    name: 'friends',
+    component: Friends,
   },
 ];
 
